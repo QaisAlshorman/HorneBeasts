@@ -8,13 +8,14 @@ class HornedBeasts extends React.Component {
             numberOfVotes: 0,
             numberOfFav:'',
         }
-    }
+    };
 
     increaseNumberOfVote = () => {
         this.setState({
             numberOfVotes: this.state.numberOfVotes + 1,
             numberOfFav:this.state.numberOfFav + '❤️',
         });
+        this.props.handleClose(this.props.title,this.props.description,this.props.image_url);
     }
 
 
