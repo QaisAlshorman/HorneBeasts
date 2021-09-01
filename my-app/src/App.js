@@ -4,10 +4,10 @@ import Main from './components/Main';
 import Footer from './components/Footer';
 import data from './components/data.json';
 import SelectedBeast from './components/SelectedBeast';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
-    
     {
       this.state = {
         show: false,
