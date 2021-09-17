@@ -1,10 +1,13 @@
+
 import React from 'react';
 
-class Footer extends React.Component{
-    render(){
-        return(
-            <p>&copy; Qais Alshorman</p>
-        )
-    }
+class Footer extends React.Component {
+  render() {
+    return (
+      <div className='footer'>
+        <h3>&copy; Qais Alshorman</h3>
+      </div>
+    );
+  }
 }
 export default Footer;

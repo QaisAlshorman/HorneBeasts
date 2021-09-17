@@ -18,9 +18,9 @@ class HornedForm extends React.Component {
         let numberOfHorn = parseInt(element.target.value);
         let x = data;
         if (numberOfHorn) {
-          let z=(element)=>{
-           return element.horns === numberOfHorn;
-          }
+            let z = (element) => {
+                return element.horns === numberOfHorn;
+            }
             x = data.filter(z);
 
         }
@@ -31,22 +31,22 @@ class HornedForm extends React.Component {
     render() {
         return (
             <Form>
-          <Form.Group controlId="exampleForm.ControlSelect1">
-            <Form.Label>How Many Horns?</Form.Label>
-            <Form.Control as="select" onChange={this.getHorn}>
-              <option value="">All</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-              <option value="100">Wow</option>
-            </Form.Control>
-          </Form.Group>
-        </Form>
+                <Form.Group controlId="exampleForm.ControlSelect1">
+                    <Form.Label>How Many Horns?</Form.Label>
+                    <Form.Control as="select" onChange={this.getHorn}>
+                        <option value="">All</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                        <option value="100">Wow</option>
+                    </Form.Control>
+                </Form.Group>
+            </Form>
         );
     }
 
 
 
-            
+
 }
-                export default HornedForm;
+export default HornedForm;
