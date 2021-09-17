@@ -1,31 +1,38 @@
 import React from 'react';
-import HornedBeasts from './HornedBeast';
+import HornedBeasts from './HornedBeasts';
+import Row from 'react-bootstrap/Row';
+// import Formlist from './components/react-bootstrap';
+
+
+
 
 class Main extends React.Component {
-    render() {
 
-        let mapArr = this.props.beasts.map(horn => {
-            return (
+  render() {
+    return (
+      <main>
+        <Row xs={1} md={4} className="g-4">
+
+          {
+            this.props.HornedData.map((allthink) => {
+              return (
                 <HornedBeasts
-                    displayData={this.props.displayData}
-                    title={horn.title}
-                    description={horn.description}
-                    image_url={horn.image_url}
-                    handleClose={this.props.handleClose}
-                    
-
+                  imageUrl={allthink.image_url}
+                  title={allthink.title}
+                  description={allthink.description}
+                  keyword={allthink.keyword}
+                  horns={allthink.horns}
+                  displayModal={this.props.displayModal}
+                  displayModal2={this.props.displayModal2}
                 />
-            );
-            
-        })
-       
-        return (
-            <main>
-                {mapArr}
-            </main>
-        );
+              )
+            })
+          }
 
-    }
+        </Row>
+      </main>
+    )
+  }
 }
 
 export default Main;
